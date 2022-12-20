@@ -6,15 +6,13 @@ export const Home = () => {
   const groups = [
     {
       name: 'Futebol',
-      description: 'Grupo de futebol',
+      slots: 5,
     },
     {
       name: 'Basquete',
-      description: 'Grupo de basquete',
     },
     {
       name: 'Vôlei',
-      description: 'Grupo de vôlei',
       icon: VolleyBall,
     },
   ];
