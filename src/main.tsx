@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import './reset.css';
 import { createBrowserRouter, RouterProvider, Route } from 'react-router-dom';
 import { Root } from './routes/root';
 import { Error } from './routes/error';
