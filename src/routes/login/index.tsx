@@ -6,7 +6,10 @@ import {
   VStack,
   Flex,
   Image,
+  Center,
+  Divider,
 } from '@chakra-ui/react';
+import { Link } from 'react-router-dom';
 import LoginIllustration from '../../assets/illustrations/login-illustration.svg';
 import './index.css';
 
@@ -21,7 +24,7 @@ export const Login = () => {
   };
 
   return (
-    <Flex as="main" direction="row-reverse" h="100%" px="6rem" py="4rem">
+    <Flex as="main" direction="row-reverse" h="100%" px="2rem" py="4rem">
       <Image
         src={LoginIllustration}
         position="absolute"
@@ -33,12 +36,12 @@ export const Login = () => {
         backgroundSize="cover"
         backgroundPosition="left"
       />
-      <Box bg="#262E57" p="3rem">
-        <Text fontSize="3xl" color="white">
+      <Box bg="#262E57" p="2rem">
+        <Text fontSize="3xl" color="white" pb="3rem">
           Entre para encontrar seu próximo racha!
         </Text>
         <form onSubmit={handleSubmit}>
-          <VStack spacing="2">
+          <VStack spacing="2rem" pb="0.5rem">
             <Input
               bg="white"
               id="email"
@@ -48,8 +51,25 @@ export const Login = () => {
             />
             <Input bg="white" type="password" placeholder="senha" />
           </VStack>
-          <Text color="white">Esqueceu sua senha?</Text>
-          <Button>Entrar</Button>
+          <Link to="/recovery">
+            <Text color="white">Esqueceu sua senha?</Text>
+          </Link>
+          <Center py="2rem">
+            <Button colorScheme="red" color="white">
+              Entrar
+            </Button>
+          </Center>
+          <Divider colorScheme="whiteAlpha" />
+          <Center pt="2rem">
+            <Text color="white">
+              Não tem uma conta?{' '}
+              <Link to="/signup">
+                <Text as="span" color="red.500">
+                  Cadastre-se
+                </Text>
+              </Link>
+            </Text>
+          </Center>
         </form>
       </Box>
     </Flex>
