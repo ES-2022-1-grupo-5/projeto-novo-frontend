@@ -10,6 +10,7 @@ import {
   Divider,
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { AppRoutes } from '..';
 import LoginIllustration from '../../assets/illustrations/login-illustration.svg';
 
 export const SignIn = () => {
@@ -50,7 +51,7 @@ export const SignIn = () => {
             />
             <Input bg="white" type="password" placeholder="senha" />
           </VStack>
-          <Link to="/recovery">
+          <Link to={AppRoutes.RECOVERY}>
             <Text color="white">Esqueceu sua senha?</Text>
           </Link>
           <Center py="2rem">
@@ -62,7 +63,7 @@ export const SignIn = () => {
           <Center pt="2rem">
             <Text color="white">
               Não tem uma conta?{' '}
-              <Link to="/signup">
+              <Link to={AppRoutes.SIGNUP}>
                 <Text as="span" color="red.500">
                   Cadastre-se
                 </Text>

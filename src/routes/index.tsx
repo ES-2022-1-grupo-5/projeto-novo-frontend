@@ -5,30 +5,39 @@ import { Home } from './home';
 import { SignIn } from './signin';
 import { Root } from './root';
 
+export enum AppRoutes {
+  ROOT = '/',
+  HOME = '',
+  SIGNIN = '/signin',
+  SIGNUP = '/signup',
+  RECOVERY = '/recovery',
+  PROFILE = '/profile',
+}
+
 export const router = createBrowserRouter([
   {
-    path: '/',
+    path: AppRoutes.ROOT,
     element: <Root />,
     errorElement: <Error />,
     children: [
       {
-        path: '',
+        path: AppRoutes.HOME,
         element: <Home />,
       },
       {
-        path: 'sigin',
+        path: AppRoutes.SIGNIN,
         element: <SignIn />,
       },
       {
-        path: 'signup',
+        path: AppRoutes.SIGNUP,
         element: <SignIn />,
       },
       {
-        path: 'recovery',
+        path: AppRoutes.RECOVERY,
         element: <SignIn />,
       },
       {
-        path: 'profile',
+        path: AppRoutes.PROFILE,
         element: (
           <RequireAuth>
             <SignIn />
