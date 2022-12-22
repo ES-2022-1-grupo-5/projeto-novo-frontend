@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom';
 import { RequireAuth } from '../components/RequireAuth';
 import { Error } from './error';
 import { Home } from './home';
-import { Login } from './login';
+import { SignIn } from './signin';
 import { Root } from './root';
 
 export const router = createBrowserRouter([
@@ -16,22 +16,22 @@ export const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'login',
-        element: <Login />,
-      },
-      {
-        path: 'recovery',
-        element: <Login />,
+        path: 'sigin',
+        element: <SignIn />,
       },
       {
         path: 'signup',
-        element: <Login />,
+        element: <SignIn />,
+      },
+      {
+        path: 'recovery',
+        element: <SignIn />,
       },
       {
         path: 'profile',
         element: (
           <RequireAuth>
-            <Login />
+            <SignIn />
           </RequireAuth>
         ),
       },

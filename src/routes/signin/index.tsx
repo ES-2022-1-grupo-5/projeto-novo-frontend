@@ -12,7 +12,7 @@ import {
 import { Link } from 'react-router-dom';
 import LoginIllustration from '../../assets/illustrations/login-illustration.svg';
 
-export const Login = () => {
+export const SignIn = () => {
   //TODO: find the type of this event
   const handleSubmit = (event: any) => {
     event.preventDefault();
