@@ -4,7 +4,7 @@ import './index.css';
 export const Navbar = () => {
   return (
     <nav className="navbar">
-      <a href={AppRoutes.HOME} className="logo">
+      <a href={AppRoutes.ROOT} className="logo">
         <img src="/logo.png" alt="logo" />
       </a>
       <ul className="navbar-nav">

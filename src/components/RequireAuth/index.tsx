@@ -1,6 +1,7 @@
 import React, { ReactNode } from 'react';
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../contexts/AuthContext';
+import { AppRoutes } from '../../routes';
 
 interface Props {
   children: JSX.Element;
@@ -11,7 +12,9 @@ export const RequireAuth = ({ children }: Props) => {
   let location = useLocation();
 
   if (!auth.user) {
-    return <Navigate to="/login" state={{ from: location }} replace />;
+    return (
+      <Navigate to={AppRoutes.SIGNIN} state={{ from: location }} replace />
+    );
   }
 
   return children;

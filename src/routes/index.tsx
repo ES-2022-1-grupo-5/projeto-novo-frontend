@@ -4,10 +4,11 @@ import { Error } from './error';
 import { Home } from './home';
 import { SignIn } from './signin';
 import { Root } from './root';
+import { SignUp } from './signup';
+import { Recovery } from './recovery';
 
 export enum AppRoutes {
   ROOT = '/',
-  HOME = '',
   SIGNIN = '/signin',
   SIGNUP = '/signup',
   RECOVERY = '/recovery',
@@ -21,7 +22,7 @@ export const router = createBrowserRouter([
     errorElement: <Error />,
     children: [
       {
-        path: AppRoutes.HOME,
+        index: true,
         element: <Home />,
       },
       {
@@ -30,11 +31,11 @@ export const router = createBrowserRouter([
       },
       {
         path: AppRoutes.SIGNUP,
-        element: <SignIn />,
+        element: <SignUp />,
       },
       {
         path: AppRoutes.RECOVERY,
-        element: <SignIn />,
+        element: <Recovery />,
       },
       {
         path: AppRoutes.PROFILE,
