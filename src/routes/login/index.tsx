@@ -11,7 +11,6 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import LoginIllustration from '../../assets/illustrations/login-illustration.svg';
-import './index.css';
 
 export const Login = () => {
   //TODO: find the type of this event
