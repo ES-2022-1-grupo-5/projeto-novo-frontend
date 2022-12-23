@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { AppRoutes } from '..';
-import LoginIllustration from '../../assets/illustrations/login-illustration.svg';
+import SignInIllustration from '../../assets/illustrations/signin-illustration.svg';
 
 export const SignIn = () => {
   //TODO: find the type of this event
@@ -24,9 +24,15 @@ export const SignIn = () => {
   };
 
   return (
-    <Flex as="main" direction="row-reverse" h="100%" px="2rem" py="4rem">
+    <Flex
+      as="main"
+      direction="row-reverse"
+      h="90vh"
+      px="3rem"
+      alignItems="center"
+    >
       <Image
-        src={LoginIllustration}
+        src={SignInIllustration}
         position="absolute"
         top="0"
         left="0"
