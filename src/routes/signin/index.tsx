@@ -36,7 +36,7 @@ export const SignIn = () => {
         backgroundSize="cover"
         backgroundPosition="left"
       />
-      <Box bg="#262E57" p="2rem">
+      <Box bg="#262E57" p="2rem" borderRadius="0.4rem">
         <Text fontSize="3xl" color="white" pb="3rem">
           Entre para encontrar seu próximo racha!
         </Text>

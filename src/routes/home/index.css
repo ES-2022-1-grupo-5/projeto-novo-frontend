@@ -1,7 +1,0 @@
-.groups {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin: 0 -10px;
-}
