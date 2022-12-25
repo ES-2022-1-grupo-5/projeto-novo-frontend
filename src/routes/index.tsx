@@ -1,18 +1,19 @@
-import { createBrowserRouter } from 'react-router-dom';
-import { RequireAuth } from '../components/RequireAuth';
-import { Error } from './error';
-import { Home } from './home';
-import { SignIn } from './signin';
-import { Root } from './root';
-import { SignUp } from './signup';
-import { Recovery } from './recovery';
+import { createBrowserRouter } from "react-router-dom";
+import { RequireAuth } from "../components/RequireAuth";
+import { Error } from "./error";
+import { Home } from "./home";
+import { SignIn } from "./signin";
+import { Root } from "./root";
+import { SignUp } from "./signup";
+import { Recovery } from "./recovery";
+import Profile from "./profile";
 
 export enum AppRoutes {
-  ROOT = '/',
-  SIGNIN = '/signin',
-  SIGNUP = '/signup',
-  RECOVERY = '/recovery',
-  PROFILE = '/profile',
+  ROOT = "/",
+  SIGNIN = "/signin",
+  SIGNUP = "/signup",
+  RECOVERY = "/recovery",
+  PROFILE = "/profile",
 }
 
 export const router = createBrowserRouter([
@@ -39,11 +40,7 @@ export const router = createBrowserRouter([
       },
       {
         path: AppRoutes.PROFILE,
-        element: (
-          <RequireAuth>
-            <SignIn />
-          </RequireAuth>
-        ),
+        element: <Profile />,
       },
     ],
   },

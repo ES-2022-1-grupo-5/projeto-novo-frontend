@@ -1,9 +1,11 @@
-import { Box, Text } from '@chakra-ui/react';
+import { Box, Text } from "@chakra-ui/react";
 
-export const Profile = () => {
+const Profile = () => {
   return (
     <Box>
       <Text>Profile - Auth Route</Text>
     </Box>
   );
 };
+
+export default Profile;
