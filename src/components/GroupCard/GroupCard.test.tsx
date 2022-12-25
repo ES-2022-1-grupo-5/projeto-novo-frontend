@@ -1,5 +1,5 @@
-import { beforeEach, describe, expect, test } from 'vitest';
 import { render, screen } from '@testing-library/react';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { GroupCard } from '.';
 import VolleyballIcon from '../../assets/icons/volleyball.svg';
 
@@ -9,15 +9,15 @@ describe('GroupCard test', () => {
       render(<GroupCard name="Test Group" />);
     });
 
-    test('Should show group name', () => {
+    it('Should show group name', () => {
       expect(screen.getByText('Test Group')).toBeDefined();
     });
 
-    test('Should show default icon', () => {
+    it('Should show default icon', () => {
       expect(screen.getByAltText('basketball')).toBeDefined();
     });
 
-    test('Should show default slots', () => {
+    it('Should show default slots', () => {
       expect(screen.getByText('0 VAGAS DISPONÍVEIS')).toBeDefined();
     });
   });
@@ -27,16 +27,17 @@ describe('GroupCard test', () => {
       render(<GroupCard name="Test Group" slots={10} icon={VolleyballIcon} />);
     });
 
-    test('Should show group name', () => {
+    it('Should show group name', () => {
       expect(screen.getByText('Test Group')).toBeDefined();
     });
 
-    test('Should show slots', () => {
+    it('Should show slots', () => {
       expect(screen.getByText('10 VAGAS DISPONÍVEIS')).toBeDefined();
     });
 
     // TODO: Refactor the way to set external icons to the component, so we can test it properly
-    test('Should show default icon', () => {
+    // https://chakra-ui.com/docs/components/icon/usage#creating-your-custom-icons
+    it('Should show default icon', () => {
       expect(screen.getByAltText('basketball')).toBeDefined();
     });
   });
