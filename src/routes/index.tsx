@@ -40,7 +40,11 @@ export const router = createBrowserRouter([
       },
       {
         path: AppRoutes.PROFILE,
-        element: <Profile />,
+        element: (
+          <RequireAuth>
+            <Profile />
+          </RequireAuth>
+        ),
       },
     ],
   },
